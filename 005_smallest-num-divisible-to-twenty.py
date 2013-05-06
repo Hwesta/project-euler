@@ -34,24 +34,22 @@ def first_try():
 
 # 2013-05-05
 
-# Works but too slow
+# Programmatic solution initially too slow, much better with some tweaks from 
+# the solution thread
 def second_try():
-    factors = range(2, 21)
-    #factors = [2, 3, 5, 7, 11, 13, 17, 19]
-    print factors
+    factors = range(11, 21) # 1-10 are factors of numbers in 11-20
     maximum = reduce(operator.mul, factors) # largest 'minimum'
-    print maximum
-    maximum = int(1e9)
-    print maximum
-    for number in xrange(2, maximum, 2):
+    for number in xrange(20, maximum, 20):
         if all( number % factor == 0 for factor in factors ):
             print number
             break
 
+second_try()
 # Prime factors under 20: 2 3 5 7 11 13 17 19
 
 # LCM stuff http://www.math.com/school/subject1/lessons/S1U3L3DP.html
 
+# Factors
 # 2 = 2
 # 3 = 3
 # 4 = 2 x 2
@@ -72,6 +70,7 @@ def second_try():
 # 19 = 19
 # 20 = 2 x 2 x 5
 
+# Max number of times each number shows up
 # 2 = 4x
 # 3 = 2x
 # 5 = 1x
