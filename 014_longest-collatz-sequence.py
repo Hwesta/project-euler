@@ -27,32 +27,39 @@ def collatz(n):
     else:
         return 3*n+1
 
+# ~5 sec
 def first_try(maximum):
-    G = {}
+    # Make graph of collatz chains
+    collatz_graph = {} # number: next in chain
     for current in xrange(2, maximum):
         next = collatz(current)
+        # Generate chain
         while current > 1:
-            # print current, "->",
-            if current not in G:
-                G[current] = next
-                #print G.keys()
-            else:
-                # print next, "chain",
+            if current not in collatz_graph:
+                collatz_graph[current] = next
+            else: # We've already calculated the rest of the chain
                 break
             current, next = next, collatz(next)
-        # print
 
-    # There's a more pythonic way to do this
-    longest_start, max_length = 1, 0
-    for start in xrange(2, maximum):
-        iterator = start
+    def get_length(start):
         length = 1
-        while G[iterator] > 1:
-            iterator = G[iterator]
-            length += 1
-        if length > max_length:
-            longest_start, max_length = start, length
-    print "Chain starting at %d is length %d." % (longest_start, max_length)
+        while collatz_graph[start] > 1:
+            # Memoize!
+            if start not in collatz_length:
+                length += 1
+                start = collatz_graph[start]
+            else: # We already know the length of the rest
+                return length + collatz_length[start]
+        return length
+
+    # Find all the lengths
+    collatz_length = {1: 1} # start number: length
+    for start in xrange(2, maximum):
+        if start not in collatz_length:
+            collatz_length[start] = get_length(start)
+
+    longest = max(collatz_length, key=collatz_length.get)
+    print "Chain starting at %d is length %d." % (longest, collatz_length[longest])
 
 
 if __name__ == '__main__':
