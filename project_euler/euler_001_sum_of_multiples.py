@@ -8,7 +8,7 @@ def first_try():
 	for i in range(1000):
 		if i%3 == 0 or i%5 == 0:
 			total += i
-	print total
+	print(total)
 
 # 2013-05-01
 
@@ -16,7 +16,7 @@ def second_try(max_val):
   multiples = [x for x in range(1000) if x%3 == 0 or x%5 == 0]
   #multiples = filter(lambda x: x%3 == 0 or x%5 == 0, range(1000))
   total = sum(multiples)
-  print total
+  print(total)
 
 # He is using a clever improvisation of the formulae for arithmetic progressions. For example, to find the sum of the terms 3,6,9,12,..., you would use (n/2)(a+l), where n is the number of terms, a is the first term, and l is the last term. But to find the last term requires a bit of work. The nth term is given by a+(n-1)d, where d is the common difference. So we need to solve 3+3(n-1)=1000, giving 3(n-1)=997, and n=997/3+1=333.333... However, n must be integer, so int(333.333...)=333, and checking, 3+3(333-1)=999; this is the last term before 1000.
 
@@ -54,7 +54,7 @@ def sum_of_series(step, x):
     return 0.5*d*int(x/d)*(1+int(x/d))
     
 def third_try(max_val):
-    print sum_of_series(3, max_val) + sum_of_series(5, max_val) - sum_of_series(15, max_val)
+    print(sum_of_series(3, max_val) + sum_of_series(5, max_val) - sum_of_series(15, max_val))
     
 first_try()
 second_try(1000)

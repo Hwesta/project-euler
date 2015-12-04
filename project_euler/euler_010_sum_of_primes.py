@@ -26,7 +26,7 @@ def first_try(n): # ~20 sec
         if next_prime < n:
             total += next_prime
         else:
-            print total
+            print(total)
             return
 
 # Holy cow this is faster than I expected!
@@ -41,7 +41,7 @@ def sieve(maximum):
     return primes
 
 def second_try(maximum): # < 1 sec
-    print sum(sieve(int(maximum)))
+    print(sum(sieve(int(maximum))))
 
 if __name__ == '__main__':
     # first_try(2e6)

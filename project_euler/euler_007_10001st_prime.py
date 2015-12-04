@@ -38,10 +38,10 @@ def first_try(nth_prime):
 
         # ~.4 sec, xrange is fast to generate, so even though doing more numbers,
         # still doing less work overall
-        if all( number % prime != 0 for prime in xrange(3, square_root, 2)):
+        if all( number % prime != 0 for prime in range(3, square_root, 2)):
             primes.append(number)
 
-    print number
+    print(number)
 
 
 first_try(10001)

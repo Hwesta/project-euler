@@ -12,6 +12,6 @@ def main(num):
 			largest=divisor
 		else:
 			divisor+=1
-	print largest
+	print(largest)
 	
 main(600851475143)

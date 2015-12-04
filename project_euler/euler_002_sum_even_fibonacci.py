@@ -14,7 +14,7 @@ def main():
 		a=b
 		b=c
 		c=a+b
-	print sum
+	print(sum)
 		
 		
 
@@ -32,7 +32,7 @@ def even_fibonacci():
         c = a + b
 
 
-print sum(even_fibonacci())
+print(sum(even_fibonacci()))
 
 # This may be a small improvement. The Fibonacci series is: 
 

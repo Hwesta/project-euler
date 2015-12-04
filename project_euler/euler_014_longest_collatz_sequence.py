@@ -31,7 +31,7 @@ def collatz(n):
 def first_try(maximum):
     # Make graph of collatz chains
     collatz_graph = {} # number: next in chain
-    for current in xrange(2, maximum):
+    for current in range(2, maximum):
         next = collatz(current)
         # Generate chain
         while current > 1:
@@ -54,12 +54,12 @@ def first_try(maximum):
 
     # Find all the lengths
     collatz_length = {1: 1} # start number: length
-    for start in xrange(2, maximum):
+    for start in range(2, maximum):
         if start not in collatz_length:
             collatz_length[start] = get_length(start)
 
     longest = max(collatz_length, key=collatz_length.get)
-    print "Chain starting at %d is length %d." % (longest, collatz_length[longest])
+    print("Chain starting at %d is length %d." % (longest, collatz_length[longest]))
 
 
 if __name__ == '__main__':

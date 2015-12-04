@@ -11,6 +11,6 @@ def main(max):
 		sumsquare+=i**2
 	
 	difference = squaresum-sumsquare
-	print difference
+	print(difference)
 	
 main(100)

@@ -4,6 +4,7 @@
 # Started 2008-12-20
 
 import operator
+from functools import reduce
 
 # Started 2008-12-20
 def main(max):
@@ -18,30 +19,30 @@ def main(max):
 	while not trigger:
 		trigger=True
 		test+=max
-		print test
+		print(test)
 		for i in range(11,max):
 			if (test%i) !=0:
 				trigger=False
 				break
 	
-	print "ans ",test
+	print("ans ",test)
 
 def first_try():
 	n=1
 	for i in range(11,20):
 		n*=i
-	print n
+	print(n)
 
 # 2013-05-05
 
 # Programmatic solution initially too slow, much better with some tweaks from 
 # the solution thread
 def second_try():
-    factors = range(11, 21) # 1-10 are factors of numbers in 11-20
+    factors = list(range(11, 21)) # 1-10 are factors of numbers in 11-20
     maximum = reduce(operator.mul, factors) # largest 'minimum'
-    for number in xrange(20, maximum, 20):
+    for number in range(20, maximum, 20):
         if all( number % factor == 0 for factor in factors ):
-            print number
+            print(number)
             break
 
 second_try()
@@ -81,5 +82,5 @@ second_try()
 # 19 = 1x
 
 LCM = 2**4 * 3**2 * 5 * 7 * 11 * 13 * 17 * 19
-print LCM
+print(LCM)
 

@@ -21,7 +21,7 @@ def main():
             if num > saved and is_palin(num):
                 saved=num
                 break
-    print "answer ", saved
+    print("answer ", saved)
 
 if __name__ == "__main__":
     main()
