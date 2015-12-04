@@ -3,3 +3,7 @@
 
 # KDE
 .directory
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
