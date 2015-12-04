@@ -59,7 +59,7 @@ def first_try(maximum):
             collatz_length[start] = get_length(start)
 
     longest = max(collatz_length, key=collatz_length.get)
-    print("Chain starting at %d is length %d." % (longest, collatz_length[longest]))
+    print(("Chain starting at %d is length %d." % (longest, collatz_length[longest])))
 
 
 if __name__ == '__main__':

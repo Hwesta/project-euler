@@ -23,11 +23,11 @@ def first_try():
         if reduce(operator.mul, test_nums) > biggest_product:
             biggest_product = reduce(operator.mul, test_nums)
             location = index
-    print(biggest_product, location, number[location:location+5])
+    print((biggest_product, location, number[location:location+5]))
 
 # From solution thread
 def second_try():
-    print(max([reduce(operator.mul, number[i:i+5]) for i in range(len(number)-5)]))
+    print((max([reduce(operator.mul, number[i:i+5]) for i in range(len(number)-5)])))
 
 if __name__ == "__main__":
     first_try()

@@ -55,7 +55,8 @@ def sum_of_series(step, x):
     
 def third_try(max_val):
     print(sum_of_series(3, max_val) + sum_of_series(5, max_val) - sum_of_series(15, max_val))
-    
-first_try()
-second_try(1000)
-third_try(1000)
+
+if __name__ == '__main__':
+    first_try()
+    second_try(1000)
+    third_try(1000)

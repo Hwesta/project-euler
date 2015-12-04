@@ -43,5 +43,5 @@ def first_try(nth_prime):
 
     print(number)
 
-
-first_try(10001)
+if __name__ == '__main__':
+    first_try(10001)

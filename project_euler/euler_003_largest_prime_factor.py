@@ -13,5 +13,6 @@ def main(num):
 		else:
 			divisor+=1
 	print(largest)
-	
-main(600851475143)
+
+if __name__ == '__main__':
+	main(600851475143)

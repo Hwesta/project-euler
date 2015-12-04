@@ -25,7 +25,7 @@ def main(max):
 				trigger=False
 				break
 	
-	print("ans ",test)
+	print(("ans ",test))
 
 def first_try():
 	n=1
@@ -45,7 +45,6 @@ def second_try():
             print(number)
             break
 
-second_try()
 # Prime factors under 20: 2 3 5 7 11 13 17 19
 
 # LCM stuff http://www.math.com/school/subject1/lessons/S1U3L3DP.html
@@ -80,7 +79,9 @@ second_try()
 # 13 = 1x
 # 17 = 1x
 # 19 = 1x
+def lcm():
+    LCM = 2**4 * 3**2 * 5 * 7 * 11 * 13 * 17 * 19
+    print(LCM)
 
-LCM = 2**4 * 3**2 * 5 * 7 * 11 * 13 * 17 * 19
-print(LCM)
-
+if __name__ == '__main__':
+    second_try()

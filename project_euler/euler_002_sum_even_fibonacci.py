@@ -7,19 +7,14 @@ def main():
 	a = 1
 	b = 1
 	c = a+b
-	sum = 0
+	total = 0
 	while c<4000000:
 		if c%2==0:
-			sum+=c
+			total+=c
 		a=b
 		b=c
 		c=a+b
-	print(sum)
-		
-		
-
-
-main()
+	print(total)
 
 # 2013-05-01
 def even_fibonacci():
@@ -31,8 +26,8 @@ def even_fibonacci():
         (a, b) = (b, a + b)
         c = a + b
 
-
-print(sum(even_fibonacci()))
+def attempt_two():
+    print((sum(even_fibonacci())))
 
 # This may be a small improvement. The Fibonacci series is: 
 
@@ -51,5 +46,6 @@ def another_even_fibonacci():
     while a+b < 4e6:
         yield a+b
         (a, b) = (a + 2*b, 2*a + 3*b)
-        
-print sum(another_even_fibonacci())
+
+def attempt_three():
+    print((sum(another_even_fibonacci())))

@@ -12,5 +12,6 @@ def main(max):
 	
 	difference = squaresum-sumsquare
 	print(difference)
-	
-main(100)
+
+if __name__ == '__main__':
+    main(100)

@@ -41,7 +41,7 @@ def sieve(maximum):
     return primes
 
 def second_try(maximum): # < 1 sec
-    print(sum(sieve(int(maximum))))
+    print((sum(sieve(int(maximum)))))
 
 if __name__ == '__main__':
     # first_try(2e6)
