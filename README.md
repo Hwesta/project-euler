@@ -1,7 +1,3 @@
-# Programming Challenges
+# Project Euler
 
-Programming challenges for fun and experimenting with languages.
-
-* [Project Euler](https://projecteuler.net/)
-* [Advent of Code 2015](http://adventofcode.com/)
-
+[Project Euler](https://projecteuler.net/) solutions for fun and experimenting with languages.
